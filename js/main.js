@@ -92,18 +92,28 @@ function setupNavigation() {
     link.addEventListener("click", function (e) {
       e.preventDefault()
       const targetId = this.getAttribute("href")
+      if (targetId === "#") return;
       const targetSection = document.querySelector(targetId)
 
       if (targetSection) {
         const offsetTop = targetSection.offsetTop - 80 // Offset untuk fixed navbar
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        })
+        if (window.anime) {
+          window.anime({
+            targets: [document.documentElement, document.body],
+            scrollTop: offsetTop,
+            duration: 1000,
+            easing: 'easeInOutQuart'
+          });
+        } else {
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          })
+        }
 
         // Tutup mobile menu jika terbuka
         const mobileMenu = document.getElementById("mobileMenu")
-        if (!mobileMenu.classList.contains("hidden")) {
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
           mobileMenu.classList.add("hidden")
         }
       }
