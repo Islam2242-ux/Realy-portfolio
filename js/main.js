@@ -10,7 +10,7 @@ let projects = [
     title: "Study Club Website",
     description: "Modern Website dengan fitur lengkap untuk alokasi SC",
     detailDescription:
-      "Platform e-commerce yang dibangun dengan Laravel 12 dan Vue.js. Dilengkapi dengan sistem pembayaran terintegrasi, manajemen inventory, dashboard admin yang komprehensif, dan sistem notifikasi real-time. Menggunakan MySQL sebagai database dan Redis untuk caching.",
+      "Proyek ini adalah sebuah platform web inovatif bernama Study Club Portal (v2) yang dibangun menggunakan framework Laravel dengan arsitektur yang bersih dan terstruktur. Dikembangkan sebagai solusi manajemen organisasi sekolah, sistem ini dirancang untuk memfasilitasi administrasi multi-klub sains dan akademik secara terintegrasi, mulai dari pengelolaan data siswa, jadwal kegiatan, materi pembelajaran, dokumentasi galeri, hingga pencapaian prestasi klub. Dengan memanfaatkan ekosistem modern Laravel, proyek ini menawarkan performa yang optimal, pengelolaan basis data yang andal, serta fungsionalitas yang fleksibel untuk mendukung produktivitas komunitas pelajar secara efisien.",
     technologies: ["Laravel 12", "Vite", "MySQL", "Filament", "Tailwind CSS", "Docker"],
     image: "image/BERANDA — STUDY CLUB PORTAL.png",
     github: "https://github.com/username/ecommerce-platform",
@@ -32,7 +32,7 @@ let projects = [
     title: "Web Driver Portofolio",
     description: "Sistem manajemen tugas untuk tim dengan kolaborasi real-time",
     detailDescription:
-      "Sistem manajemen tugas berbasis web yang memungkinkan tim untuk berkolaborasi secara real-time. Dilengkapi dengan fitur kanban board, time tracking, reporting, dan integrasi dengan berbagai tools produktivitas. Dibangun dengan teknologi modern untuk performa optimal.",
+      "Proyek ini adalah sebuah platform landing page interaktif bernama Mahdi Lombok Private Driver, sebuah website layanan pemandu wisata dan sewa mobil pribadi di Lombok, Indonesia. Dikembangkan dengan pendekatan modern menggunakan HTML5 semantik, Tailwind CSS, serta animasi halus berbasis GSAP, platform ini dirancang responsif dan ramah SEO untuk memaksimalkan konversi bisnis lokal. Website ini dilengkapi dengan fitur unggulan dwibahasa (Inggris-Indonesia), visualisasi galeri lightbox, tab manajemen harga yang transparan, integrasi tombol WhatsApp interaktif untuk reservasi instan, serta fitur unik Digital Phrasebook 'Point & Show' guna mempermudah komunikasi wisatawan asing selama di perjalanan.",
     technologies: ["HTML", "Javascript", "Tailwind CSS", "SEO"],
     image: "image/60624061-aac98b9b06ee8451970680737b464de1.png",
     github: "https://github.com/Islam2242-ux/Mahdi-Driver.git",
