@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Developer Profesional</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        },
+                        secondary: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800 relative bg-transparent">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg" class="fixed inset-0 -z-10 w-full h-full"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/70 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pb-1">
+                    Portfolio
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Beranda</a>
+                    <a href="#tentang" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Tentang</a>
+                    <a href="#proyek" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Proyek</a>
+                    <a href="#kontak" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Kontak</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#beranda" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Beranda</a>
+                    <a href="#tentang" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Tentang</a>
+                    <a href="#proyek" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Proyek</a>
+                    <a href="#kontak" class="nav-link text-gray-700 hover:text-primary-600 transition-colors">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Beranda -->
+    <section id="beranda" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Wave Animation Container -->
+        <div class="wave-container absolute inset-0">
+            <svg class="wave-svg" viewBox="0 0 1200 320" preserveAspectRatio="none">
+                <path class="wave-path" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,186.7C672,203,768,181,864,154.7C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-fade-in">
+                    <span class="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pb-2">
+                        M. Galih Rafiqul Islam
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 opacity-0 animate-fade-in-delay">
+                    Website Developer & Mobile App Developer
+                </p>
+                <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-2">
+                    Mengembangkan solusi digital inovatif dengan keahlian dalam Laravel, Flutter, dan JavaScript. 
+                    Berpengalaman dalam membangun aplikasi web dan mobile yang modern dan responsif.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-delay-3">
+                    <a href="#proyek" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-code mr-2"></i>Lihat Proyek
+                    </a>
+                    <a href="#kontak" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Tentang Saya -->
+    <section id="tentang" class="py-20 bg-white/30 backdrop-blur-sm relative overflow-hidden">
+        <!-- Wave Animation Container -->
+        <div class="wave-container-about absolute top-0 left-0 right-0">
+            <svg class="wave-svg-about" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="wave-path-about" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pb-2">
+                    Tentang Saya
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <!-- Kolom Teks -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                        Passionate Developer dengan Visi Inovatif
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Saya adalah seorang Website Developer & Mobile App Developer dengan pengalaman lebih dari 2 tahun dalam 
+                        mengembangkan aplikasi web dan mobile. Memiliki keahlian mendalam dalam berbagai 
+                        teknologi modern dan selalu bersemangat untuk mempelajari hal-hal baru.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Fokus utama saya adalah menciptakan solusi digital yang tidak hanya fungsional, 
+                        tetapi juga memberikan pengalaman pengguna yang luar biasa. Setiap proyek yang 
+                        saya kerjakan selalu mengutamakan kualitas, performa, dan kepuasan klien.
+                    </p>
+                    
+                    <!-- Keahlian Utama -->
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Keahlian Utama:</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="bg-gradient-to-r from-red-50 to-red-100 p-4 rounded-lg text-center">
+                                <i class="fab fa-laravel text-3xl text-red-600 mb-2"></i>
+                                <h5 class="font-semibold text-gray-800">Laravel 12</h5>
+                                <p class="text-sm text-gray-600">Backend Development</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg text-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" class="w-8 h-8 mx-auto mb-2" alt="Flutter" />
+                                <h5 class="font-semibold text-gray-800">Flutter</h5>
+                                <p class="text-sm text-gray-600">Mobile Development</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 rounded-lg text-center">
+                                <i class="fab fa-js-square text-3xl text-yellow-600 mb-2"></i>
+                                <h5 class="font-semibold text-gray-800">Tailwind CSS</h5>
+                                <p class="text-sm text-gray-600">Frontend Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kolom Foto -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                            <img src="image/Frame 1 (1).png" 
+                                 alt="Foto Profesional" 
+                                 class="w-full h-full object-cover ">
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full opacity-20 animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-secondary-600 to-primary-600 rounded-full opacity-10 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Proyek -->
+    <section id="proyek" class="py-20 bg-white/70 backdrop-blur-md relative overflow-hidden">
+        <!-- Wave Animation Container -->
+        <div class="wave-container-projects absolute top-0 left-0 right-0">
+            <svg class="wave-svg-projects" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="wave-path-projects" d="M0,32L48,37.3C96,43,192,53,288,48C384,43,480,21,576,16C672,11,768,21,864,32C960,43,1056,53,1152,48C1248,43,1344,21,1392,10.7L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pb-2">
+                    Proyek Terbaru
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Berikut adalah beberapa proyek yang telah saya kerjakan dengan berbagai teknologi modern
+                </p>
+            </div>
+            
+            <!-- Grid Proyek -->
+            <div id="projectGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Proyek akan ditambahkan secara dinamis -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Kontak -->
+    <section id="kontak" class="py-32 bg-white/30 backdrop-blur-sm relative overflow-hidden">
+        <!-- Wave Animation Container -->
+        <div class="wave-container-contact absolute top-0 left-0 right-0">
+            <svg class="wave-svg-contact" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="wave-path-contact" d="M0,96L48,90.7C96,85,192,75,288,80C384,85,480,107,576,112C672,117,768,107,864,96C960,85,1056,75,1152,80C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent pb-2">
+                    Hubungi Saya
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 mx-auto rounded-full mt-8"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Mari berkolaborasi untuk mewujudkan ide digital Anda menjadi kenyataan
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Form Kontak -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Kirim Pesan</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="nama" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" id="nama" name="nama" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all">
+                            </div>
+                            <div>
+                                <label for="pesan" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                                <textarea id="pesan" name="pesan" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i>Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Info Kontak -->
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-r from-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
+                            <h3 class="text-2xl font-semibold mb-6">Informasi Kontak</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-medium">Email</p>
+                                        <p class="opacity-90">mgalihrafiqul.dev@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fab fa-whatsapp text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-medium">WhatsApp</p>
+                                        <p class="opacity-90">+62 857-9200-2867</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-medium">Lokasi</p>
+                                        <p class="opacity-90">Indonesia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tombol WhatsApp -->
+                        <button id="copyWhatsApp" 
+                                class="w-full bg-green-500 text-white py-4 px-6 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-xl mr-3"></i>
+                            Salin Nomor WhatsApp
+                        </button>
+                        
+                        <!-- Social Media -->
+                        <div class="text-center">
+                            <p class="text-gray-600 mb-4">Ikuti saya di:</p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="#" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary-600 hover:text-white transition-all">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white/60 backdrop-blur-md border-t border-white/40 py-12 relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4 pb-1">
+                    Portfolio Developer
+                </h3>
+                <p class="text-gray-600 max-w-md mx-auto">
+                    Mengembangkan solusi digital inovatif dengan teknologi terdepan
+                </p>
+                <div class="flex justify-center space-x-6 mt-6">
+                    <a href="#" class="w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary-600 hover:text-white transition-all shadow-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary-600 hover:text-white transition-all shadow-sm">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/50 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary-600 hover:text-white transition-all shadow-sm">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-200/50 pt-8">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 Portfolio Developer. Semua hak dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Detail Proyek -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 id="modalTitle" class="text-3xl font-bold text-gray-800"></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div id="modalContent" class="space-y-6">
+                    <!-- Konten akan diisi secara dinamis -->
+                </div>
+                
+                <div id="modalActions" class="flex flex-wrap gap-4 mt-8">
+                    <!-- Tombol aksi akan diisi secara dinamis -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
